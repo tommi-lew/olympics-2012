@@ -2,7 +2,7 @@ require 'sinatra'
 require_relative File.join('config', "shared.rb")
 
 require 'json'
-require 'Curl'
+require 'curl'
 
 get '/' do
   curl = Curl::Easy.new("http://apify.heroku.com/api/olympics2012_medals.json")
