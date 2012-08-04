@@ -11,6 +11,7 @@ gem "curb"                , "~> 0.8.1"
 group :development do
   gem "sinatra-contrib"   , "~> 1.3.1"
   gem "heroku"            , "~> 2.30.1"
+  gem "nokogiri"          , "~> 1.5.5"
 end
 
 group :test do

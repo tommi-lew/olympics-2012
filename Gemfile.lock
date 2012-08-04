@@ -82,6 +82,7 @@ GEM
     mime-types (1.19)
     multi_json (1.3.6)
     netrc (0.7.5)
+    nokogiri (1.5.5)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -136,6 +137,7 @@ DEPENDENCIES
   haml (~> 3.1.6)
   heroku (~> 2.30.1)
   json_spec (~> 1.0.3)
+  nokogiri (~> 1.5.5)
   rack-test (~> 0.6.1)
   rspec (~> 2.11.0)
   sinatra (~> 1.3.2)
