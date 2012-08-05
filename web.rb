@@ -8,7 +8,7 @@ get '/' do
   haml :index, :locals => {:medal_count => medal_count}
 end
 
-get '/no_medals' do
+get '/no_medal' do
   result = medal_count
   countries_wo_medals = []
 
