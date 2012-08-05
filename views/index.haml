@@ -1,45 +1,30 @@
-!!!
-%html
-  %head
-    %title Olympics
-    %script{:type => "text/javascript",
-            :src  => "js/bootstrap.min.js"}
-    %link(rel="stylesheet" href="css/bootstrap.min.css")
-    %link(rel="stylesheet" href="css/bootstrap-responsive.min.css")
-  %body
-
-    %div.container
-      %div.navbar
-        %div.navbar-inner
-          %div.container
-            %a.brand{href: "#"}
-              Olympics Medal Count
-      %div.medals-table
-        %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center"}
-          %thead
-            %tr
-              %th
-                Rank
-              %th
-                Flag
-              %th
-                Country
-              %th
-                Gold
-              %th
-                Silver
-              %th
-                Bronze
-              %th
-                Total
-          %tbody
-            - medal_count.each do |country|
-              %tr
-                %td= country['rank']
-                %td
-                  %img{src: "http://www.london2012.com/" + country["flag"]}
-                %td{style: "text-align: left"}= country['country']
-                %td= country['gold']
-                %td= country['silver']
-                %td= country['bronze']
-                %td= country['total']
+= partial "header"
+%div.medals-table
+  %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center"}
+    %thead
+      %tr
+        %th
+          Rank
+        %th
+          Flag
+        %th
+          Country
+        %th
+          Gold
+        %th
+          Silver
+        %th
+          Bronze
+        %th
+          Total
+    %tbody
+      - medal_count.each do |country|
+        %tr
+          %td= country['rank']
+          %td
+            %img{src: "http://www.london2012.com/" + country["flag"]}
+          %td{style: "text-align: left"}= country['country']
+          %td= country['gold']
+          %td= country['silver']
+          %td= country['bronze']
+          %td= country['total']
