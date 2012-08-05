@@ -4,4 +4,5 @@ class Country
   property :name, String
   property :flagSrc, String
   property :url, String
+  property :continent, String
 end
