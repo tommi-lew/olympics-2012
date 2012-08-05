@@ -19,27 +19,12 @@
           %thead
             %tr
               %th
-                Rank
-              %th
                 Flag
               %th
                 Country
-              %th
-                Gold
-              %th
-                Silver
-              %th
-                Bronze
-              %th
-                Total
           %tbody
-            - medal_count.each do |country|
+            - countries.each do |country|
               %tr
-                %td= country['rank']
+                %td= country.name
                 %td
-                  %img{src: "http://www.london2012.com/" + country["flag"]}
-                %td{style: "text-align: left"}= country['country']
-                %td= country['gold']
-                %td= country['silver']
-                %td= country['bronze']
-                %td= country['total']
+                  %img{src: "http://www.london2012.com/" + country.flagSrc}
