@@ -17,7 +17,7 @@ get '/no_medal' do
     countries_wo_medals << country if !has_country?(result, country.url_name)
   end
 
-  haml :no_medals, :locals => { :countries => countries_wo_medals }
+  haml :no_medal, :locals => { :countries => countries_wo_medals }
 end
 
 def medal_count
