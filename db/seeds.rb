@@ -16,8 +16,11 @@ if Country.count == 0
       name = country.css('div.countryName a').text
       flagSrc = country.css('div.image a img').attribute("src")
       url = country.css('div.countryName a').attribute("href")
+      url_name = country.css('a').attribute("href").text
+      url_name.slice!("/country/")
+      url_name.chop!.chop!
 
-      c = Country.new(name: name, flagSrc: flagSrc, url: url, continent: continent)
+      c = Country.new(name: name, flagSrc: flagSrc, url: url, continent: continent, url_name: url_name)
       c.save
     end
   end
