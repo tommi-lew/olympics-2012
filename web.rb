@@ -11,5 +11,5 @@ get '/' do
 
   json_result = JSON.parse(result)
 
-  erb :index, :locals => {:json_result => json_result}
+  haml :index, :locals => {:json_result => json_result}
 end
