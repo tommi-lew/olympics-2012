@@ -21,14 +21,29 @@
           Bronze
         %th
           Total
+        %th
+          Continent
     %tbody
       - medal_count.each do |country|
         %tr
           %td= country['rank']
           %td
             %img{src: "http://www.london2012.com/" + country["flag"]}
-          %td{style: "text-align: left"}= country['country']
+          %td{style: "text-align: left"}
+            = country['country']
           %td= country['gold']
           %td= country['silver']
           %td= country['bronze']
           %td= country['total']
+          %td
+            - if country['continent'] == "africa"
+              %span.label=country['continent']
+            - elsif country['continent'] == "asia"
+              %span.label.label-success=country['continent']
+            - elsif country['continent'] == "oceania"
+              %span.label.label-warning=country['continent']
+            - elsif country['continent'] == "americas"
+              %span.label.label-important=country['continent']
+            - elsif country['continent'] == "europe"
+              %span.label.label-inverse=country['continent']
+

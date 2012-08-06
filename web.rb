@@ -28,6 +28,7 @@ def medal_count
   result.each do |country|
     country["url"].slice!("/country/")
     country["url"].slice!("/medals/index.html")
+    country.merge!({"continent" => Country.first(url_name: country["url"]).continent})
   end
   result
 end
