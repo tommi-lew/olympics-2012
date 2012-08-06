@@ -1,5 +1,10 @@
+%div.count.alert.alert-info{style: "width: 300px; margin-left: auto; margin-right: auto; text-align: center"}
+  %p{style: "font-size: 120%"}
+    Countries without medals:
+    %span.number{style: "font-weight: bold"}
+      = countries.count
 %div.no-medals
-  %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center"}
+  %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center; font-size: 14px"}
     %tbody
       - countries.each_slice(6) do |slice|
         %tr
