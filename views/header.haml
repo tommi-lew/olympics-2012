@@ -2,10 +2,9 @@
 %html
   %head
     %title Olympics
-    %script{:type => "text/javascript",
-            :src  => "js/google-analytics.js"}
-    %script{:type => "text/javascript",
-            :src  => "js/bootstrap.min.js"}
+    - if locals[:env] == "production"
+      %script{:type => "text/javascript", :src  => "js/google-analytics.js"}
+    %script{:type => "text/javascript", :src  => "js/bootstrap.min.js"}
     %link(rel="stylesheet" href="css/bootstrap.min.css")
     %link(rel="stylesheet" href="css/bootstrap-responsive.min.css")
   %body

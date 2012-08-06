@@ -5,7 +5,7 @@ require 'json'
 require 'curl'
 
 get '/' do
-  haml :index, :locals => {:medal_count => medal_count}
+  haml :index, :locals => {:env => ENV["RACK_ENV"], :medal_count => medal_count}
 end
 
 get '/no_medal' do
