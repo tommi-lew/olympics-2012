@@ -12,4 +12,5 @@
             %td
               %img{src: "http://www.london2012.com/" + country.flagSrc}
               </br>
-              = country.name
+              %a{href: "http://www.london2012.com/country/" + country.url_name}
+                = country.name

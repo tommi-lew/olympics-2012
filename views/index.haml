@@ -30,7 +30,8 @@
           %td
             %img{src: "http://www.london2012.com/" + country["flag"]}
           %td{style: "text-align: left"}
-            = country['country']
+            %a{href: "http://www.london2012.com/country/" + country["url"]}
+              = country['country']
           %td= country['gold']
           %td= country['silver']
           %td= country['bronze']
