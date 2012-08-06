@@ -1,8 +1,7 @@
-= partial "header", :locals => {:env => env}
 %div.no-medals
   %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center"}
     %tbody
-      - countries.each_slice(8) do |slice|
+      - countries.each_slice(6) do |slice|
         %tr
           - slice.each do |country|
             %td
