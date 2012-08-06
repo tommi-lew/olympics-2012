@@ -1,0 +1,36 @@
+%div.medal-count-by-continent
+  %table.tables.table-striped.medals.table-bordered.table-condensed{style: "margin-left: auto;margin-right: auto;text-align:center; font-size: 14px"}
+    %thead
+      %tr
+        %th
+          Continent
+        %th
+          Gold
+        %th
+          Silver
+        %th
+          Bronze
+        %th
+          Total
+    %tbody
+      - continent_medals.each do |continent|
+        %tr
+          %td
+            - if continent['continent'] == "africa"
+              %span.label=continent['continent']
+            - elsif continent['continent'] == "asia"
+              %span.label.label-success=continent['continent']
+            - elsif continent['continent'] == "oceania"
+              %span.label.label-warning=continent['continent']
+            - elsif continent['continent'] == "americas"
+              %span.label.label-important=continent['continent']
+            - elsif continent['continent'] == "europe"
+              %span.label.label-inverse=continent['continent']
+          %td
+            = continent['gold']
+          %td
+            = continent['silver']
+          %td
+            = continent['bronze']
+          %td
+            = continent['total']
